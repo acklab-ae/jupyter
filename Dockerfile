@@ -22,9 +22,9 @@ ENV PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
 ENV JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
 
 #setting up working directories
-RUN mkdir -p /home/jupyter/notebooks && \
-    mkdir -p /home/jupyter/datasets && \
-    git clone https://github.com/acklab-ae/jupyter.git /home/jupyter
+RUN mkdir -p /home/jupyter/notebooks
+RUN mkdir -p /home/jupyter/datasets
+RUN git clone https://github.com/acklab-ae/jupyter.git /home/jupyter
 
 WORKDIR /home/jupyter/
 
