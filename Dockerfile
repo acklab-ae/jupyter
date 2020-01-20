@@ -29,6 +29,7 @@ WORKDIR /home/jupyter/
 
 # Download and execute post processing scripts
 RUN chmod a+x /tmp/install/ds.sh
+RUN sh /tmp/install/ds.sh
 
 #sourcing the environment variables
 RUN source ~/.bashrc && \
