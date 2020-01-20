@@ -1,5 +1,3 @@
-#!/bin/bash
-
-/usr/bin/git clone https://github.com/acklab-ae/jupyter.git /home/jupyter
+git clone https://github.com/acklab-ae/jupyter.git /tmp/update
 
 echo "Execute whatever script you want after launch"
