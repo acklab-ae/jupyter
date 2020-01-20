@@ -36,4 +36,4 @@ RUN source ~/.bashrc && \
 
 #Running jupyter by default
 #CMD ["sh","-c","jupyter notebook --ip 0.0.0.0 --allow-root --no-browser"]
-CMD ["sh /tmp/install/runme.sh"]
+CMD ["/tmp/install/runme.sh"]
