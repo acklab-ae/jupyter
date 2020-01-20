@@ -24,12 +24,12 @@ ENV JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
 #setting up working directories
 RUN mkdir -p /home/jupyter/notebooks
 RUN mkdir -p /home/jupyter/datasets
-RUN git clone https://github.com/acklab-ae/jupyter.git /home/jupyter
+RUN git clone https://github.com/acklab-ae/jupyter.git /home/jupyter/install
 
 WORKDIR /home/jupyter/
 
 # Download and execute post processing scripts
-RUN chmod a+x /home/jupyter/ds.sh
+RUN chmod a+x /home/jupyter/install/ds.sh
 
 #sourcing the environment variables
 RUN source ~/.bashrc && \
@@ -37,4 +37,4 @@ RUN source ~/.bashrc && \
 
 #Running jupyter by default
 #CMD ["sh","-c","jupyter notebook --ip 0.0.0.0 --allow-root --no-browser"]
-CMD ["sh /home/jupyter/runme.sh"]
+CMD ["sh /home/jupyter/install/runme.sh"]
